@@ -13,7 +13,7 @@ export class PublicComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.firstChild?.params.subscribe((param) => {
-      console.log(param);
+
     })
 
   }

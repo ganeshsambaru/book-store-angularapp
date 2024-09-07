@@ -6,13 +6,16 @@ import { DeleteBookComponent } from './components/delete-book/delete-book.compon
 
 const routes: Routes = [
   {
-    path:'user/:userId', component: UserComponent,
-    children:[
+    path: 'user/:userId',
+    component: UserComponent,
+    children: [
       {
-        path:'add-book',component:AddBookComponent
+        path: 'add-book',
+        component: AddBookComponent,
       },
       {
-        path:'delete-book',component: DeleteBookComponent
+        path: 'delete-book',
+        component: DeleteBookComponent,
       },
     ],
   },
@@ -20,6 +23,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class UserRoutingModule { }
+export class UserRoutingModule {}
