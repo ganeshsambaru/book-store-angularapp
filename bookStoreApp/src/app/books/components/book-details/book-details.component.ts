@@ -17,12 +17,8 @@ export class BookDetailsComponent implements OnInit{
 
     this.route.params.subscribe((param) => {
           this.id = param['id'];
-          this.autherId = param['autherId'];
     });
-    this.route.queryParams.subscribe((queryParam) =>{
-      this.name=queryParam['name'];
-      console.log(queryParam);
-    });
+
   }
 
 }
