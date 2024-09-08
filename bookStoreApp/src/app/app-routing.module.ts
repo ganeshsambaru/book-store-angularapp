@@ -13,7 +13,7 @@ const routes: Routes = [
   {
     path: 'auth',
     component: AuthComponent,
-    loadChildren: () => import('./auth/auth.module').then((x)=>x.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then(x=>x.AuthModule)
   },
   {
     path: 'user/:userId',

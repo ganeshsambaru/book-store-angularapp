@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -7,8 +7,9 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [AppComponent, AboutUsComponent, HowItWorksComponent],
   imports: [
@@ -17,12 +18,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     //UserModule,
     //PublicModule,
     SharedModule,
-
-    BrowserAnimationsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
+
   ],
 
   providers: [],
   bootstrap: [AppComponent],
+
 })
 export class AppModule {}
